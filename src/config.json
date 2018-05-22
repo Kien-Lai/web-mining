@@ -1,0 +1,22 @@
+{
+    "Hapacol": {
+        "price":0.3368607684,
+        "strong":0.15430335,
+        "sideEffect":0.1924500897
+    },
+    "Aspirin": {
+        "price":0.6737215369,
+        "strong":0.6172133998,
+        "sideEffect":0.5773502692
+    },
+    "Paracetamol": {
+        "price":0.4210759605,
+        "strong":0.4629100499,
+        "sideEffect":0.1924500897
+    },
+    "Efferagan": {
+        "price":0.5052911526,
+        "strong":0.6172133998,
+        "sideEffect":0.7698003589
+    }
+}

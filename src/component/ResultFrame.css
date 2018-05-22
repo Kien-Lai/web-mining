@@ -1,0 +1,59 @@
+.frame-rs {
+    height: 90%;
+    width: 60%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-color: white;
+    border: 3px solid #453478;
+    border-radius: 10px;
+    animation: showUp forwards 3s;
+    transition: left 1s;
+    overflow-y: scroll;
+    font-size: 1.2em;
+}
+
+.pull-right {
+    left: 170%;
+}
+
+.comeback-btn-rs {
+    margin-left: 2%;
+    background-color: transparent;
+    border: none;
+    color: black;
+}
+
+.comeback-btn-rs:focus {
+    outline: none;
+}
+
+.come-back-rs {
+    transition: all 1s ease;
+}
+
+.comeback-btn-rs:hover {
+    cursor: pointer;
+}
+
+.comeback-btn-rs:hover .come-back-rs {
+    transform: rotate(360deg);
+}
+
+.result-rs li {
+    border: 1px solid white;
+    font-size: 1.8em;
+    color: #453478;
+    text-align: center;
+    margin: 5%;
+    transition: font-weight 0.5s ease;
+}
+
+.result-rs li:hover {
+    cursor: zoom-in;
+    color: #453478;
+    font-weight: 800;
+    border: 1px solid #453478;
+    border-radius: 10px;
+}

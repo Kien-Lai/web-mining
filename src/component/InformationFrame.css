@@ -1,0 +1,133 @@
+.frame-if {
+    height: 95%;
+    width: 100%;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    background-size: cover;
+    border: 5px solid pink;
+    border-radius: 10px;
+    animation: showUp forwards 3s;
+    transition: left 1s;
+    font-size: 1.2em;
+    opacity: 0.1;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+#search-frame {
+    position: relative;
+    display: block;
+    margin: auto;
+    margin-top: 10px; 
+    margin-bottom: 0px;
+    width: 90%;
+    height: 8%;
+    text-align: center; 
+    border: 5px solid pink;
+    border-radius: 10px;
+    outline: none;
+    font-size: 1.3em;
+    font-weight: 600;
+    background-color: white; 
+}
+
+.suggess {
+    position: absolute;
+    top: 10%;
+    left: auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(27, 25, 25, 0.932);
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    opacity: 0.9;
+    border-radius: 5px;
+    z-index: 2;
+    transition: top 1s;
+}
+
+.suggess:hover {
+    cursor: pointer;
+}
+
+.suggess li:hover{
+    color: rgb(255, 192, 231);
+}
+
+.unvisible {
+    top: 120%;
+}
+
+.visible {
+    top: 10%;
+}
+
+#search-icon {
+    position: absolute;
+    top: 10px;
+    left: 8%;
+    font-size:1.3em;
+    color: black;
+    z-index: 2;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.partition {
+    flex: 1;
+    position: relative;
+}
+
+.recommand {
+    display: inline-block;
+    height: 200px;
+    font-size: 1.2em;
+    color: white;
+    font-weight: 600;
+}
+
+.recommand  ul {
+    width: 50px;
+    overflow: auto;
+}
+
+.recommand li {
+    white-space: nowrap;
+}
+
+.recommand:hover {
+    cursor: pointer;
+}
+
+.recommand li:hover{
+    color: black;
+}
+
+#downicon {
+    transition: transform 0.5s;
+}
+
+#downicon:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
+}
+
+#pacman-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
