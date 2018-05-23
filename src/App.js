@@ -39,18 +39,11 @@ class App extends Component {
       password: this.state.password,
     }
     console.log(data);
-    fetch(link, {
-      body: JSON.stringify(data), // must match 'Content-Type' header
-      credentials: 'same-origin', // include, same-origin, *omit
-      headers: {
-        'content-type': 'application/json'
-      },
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'cors', // no-cors, cors, *same-origin
-    })
+    axios.post(link, (data))
     .then(success => {
       console.log(success);
-      return success.json()
+      console.log('Cookie: ', success.headers.get('set-cookie'));
+      return success.data;
     })
     .then(data => {
       if(data.status === 1){

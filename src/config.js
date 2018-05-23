@@ -1,1 +1,1 @@
-module.exports.host = "127.0.0.1:5000";
+module.exports.host = "localhost:5000";

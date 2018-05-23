@@ -37,8 +37,8 @@ class InformationFrame extends Component {
             this.setState({searching:true});
             setTimeout(() => {
                 let link = 'http://'+host+"/api/song/search?name="+this.state.keyword;
-                fetch(link)
-                .then(success => success.json())
+                axios.get(link)
+                .then(success => success.data)
                 .then(data => {
                     let suggestList = data.result || [];
                     this.setState({
@@ -64,8 +64,8 @@ class InformationFrame extends Component {
         
         // load recommand list
         let linkRecommand = 'http://'+host+'/api/song/recommend';
-        fetch(linkRecommand)
-        .then(success => success.json())
+        axios.get(linkRecommand)
+        .then(success => success.data)
         .then(data => {
             this.setState({
                 loading: false,
@@ -76,16 +76,8 @@ class InformationFrame extends Component {
 
         // Dispatching a api to saying with server that i chose a song
         let linkListeningSong = 'http://'+host+'/api/song/listen';
-        fetch(linkListeningSong, {
-            body: JSON.stringify({song_id:e.song_id}), // must match 'Content-Type' header
-            credentials: 'same-origin', // include, same-origin, *omit
-            headers: {
-              'content-type': 'application/json'
-            },
-            method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'cors', // no-cors, cors, *same-origin
-        })
-        .then(success => success.json())
+        axios.post(linkListeningSong, {song_id:e.song_id})
+        .then(success => success.data)
         .then(data => console.log(data))
         .catch(e => console.log(e));
     }
