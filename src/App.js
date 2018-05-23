@@ -42,7 +42,6 @@ class App extends Component {
     axios.post(link, (data))
     .then(success => {
       console.log(success);
-      console.log('Cookie: ', success.headers.get('set-cookie'));
       return success.data;
     })
     .then(data => {
