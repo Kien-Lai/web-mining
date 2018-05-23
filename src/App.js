@@ -64,7 +64,25 @@ class App extends Component {
   }
 
   signup(username, password){
-    alert(username+password);
+    // alert(username+password);
+    let link = 'http://'+host+'/api/signup';
+    let data = {
+      user_id: username,
+      password: password,
+    }
+    console.log(data);
+    axios.post(link, (data))
+    .then(success => {
+      console.log(success);
+      return success.data;
+    })
+    .then(data => {
+      if(data.status === 1){
+        alert("Signup Successful");
+      } else {
+        alert("Signup Failed");
+      }
+    });
   }
 
   render() {
