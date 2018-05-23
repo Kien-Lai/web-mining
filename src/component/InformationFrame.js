@@ -63,8 +63,26 @@ class InformationFrame extends Component {
         })
         
         // load recommand list
-        let linkRecommand = 'http://'+host+'/api/song/recommend';
-        axios.get(linkRecommand)
+        // let linkRecommand = 'http://'+host+'/api/song/recommend';
+        // axios.get(linkRecommand)
+        // .then(success => success.data)
+        // .then(data => {
+        //     this.setState({
+        //         loading: false,
+        //         recommendedList: data,
+        //     })
+        // })
+        // .catch(e => console.log(e))
+
+        // Dispatching a api to saying with server that i chose a song
+        let linkListeningSong = 'http://'+host+'/api/song/listen';
+        axios.post(linkListeningSong, {song_id:e.song_id})
+        .then(success => success.data)
+        .then(data => console.log(data))
+        .then(() => {
+            let linkRecommand = 'http://'+host+'/api/song/recommend';
+            return axios.get(linkRecommand)
+        })
         .then(success => success.data)
         .then(data => {
             this.setState({
@@ -72,13 +90,6 @@ class InformationFrame extends Component {
                 recommendedList: data,
             })
         })
-        .catch(e => console.log(e))
-
-        // Dispatching a api to saying with server that i chose a song
-        let linkListeningSong = 'http://'+host+'/api/song/listen';
-        axios.post(linkListeningSong, {song_id:e.song_id})
-        .then(success => success.data)
-        .then(data => console.log(data))
         .catch(e => console.log(e));
     }
 
