@@ -9,7 +9,8 @@
     "react-icons": "^2.2.7",
     "react-lazyload": "^2.3.0",
     "react-scripts": "1.1.4",
-    "react-spinners": "^0.3.2"
+    "react-spinners": "^0.3.2",
+    "reactjs-popup": "^1.1.1"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -64,15 +64,20 @@ class App extends Component {
     })
   }
 
+  signup(username, password){
+    alert(username+password);
+  }
+
   render() {
     return (
       <div className="app">
-      <Login 
-        username={this.username}
-        password={this.password}
-        login={this.login}
-        logout={this.logout}
-      />
+        <Login 
+          username={this.username}
+          password={this.password}
+          login={this.login}
+          logout={this.logout}
+          signup={this.signup}
+        />
         <div className="title">
           <h1 id="find-a-docter"><Music size={32}/> FIND A SONG !</h1>
           <h3 id="supply-medicine">Enhancing music eperience for everyone</h3>

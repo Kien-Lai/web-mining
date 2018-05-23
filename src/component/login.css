@@ -22,3 +22,23 @@
 .lg-btn:hover{
     cursor: pointer;
 }
+
+.lg-btn-signup {
+    background-color: #6F103A;
+    border-radius: 5px; 
+    width: 100%;
+    color: white;
+}
+
+.lg-btn-signup:hover{
+    cursor: pointer;
+}
+
+.lg-signup-input{
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.lg-signup-btn:hover {
+    cursor: pointer;
+}
