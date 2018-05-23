@@ -114,7 +114,7 @@ class InformationFrame extends Component {
                         <div className="partition">
                             <div className="recommand">
                                 <ol>
-                                    {this.state.recommendedList.map( e => <li onClick={()=> this.selectSong(e)}>{e.song_name}</li>)}
+                                    {this.state.recommendedList.map( e => <li onClick={()=> this.selectSong(e)}>{e.song_name + "-" + e.artist_name}</li>)}
                                 </ol>
                             </div>
                             <div id="pacman-loader">
